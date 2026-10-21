@@ -1,0 +1,1263 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honda Nossamoto - Consultor Genesiano | Catálogo de Consórcio</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts: Inter & Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Tesseract.js OCR Engine -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            honda: {
+              red: '#CC0000',
+              darkred: '#880000',
+              black: '#0D0D0D',
+              darkgray: '#18181B',
+              gray: '#27272A',
+              lightgray: '#F4F4F5'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0A0A0C;
+      color: #E4E4E7;
+    }
+    .font-heading {
+      font-family: 'Montserrat', sans-serif;
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: #18181B;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #CC0000;
+      border-radius: 4px;
+    }
+    .glass-card {
+      background: rgba(24, 24, 27, 0.9);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .badge-cash-price {
+      background: linear-gradient(135deg, #CC0000 0%, #880000 100%);
+      box-shadow: 0 4px 15px rgba(204, 0, 0, 0.4);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between custom-scrollbar">
+
+  <!-- HEADER BRANDING -->
+  <header class="sticky top-0 z-40 bg-honda-black/95 backdrop-blur-md border-b border-red-900/40 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- LOGO & STORE NAME -->
+      <div class="flex items-center gap-3">
+        <div class="w-12 h-12 bg-honda-red rounded-xl flex items-center justify-center text-white text-2xl font-black shadow-lg shadow-red-900/50 transform -rotate-2">
+          <i class="fa-solid fa-motorcycle"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-[10px] font-bold tracking-widest text-red-500 uppercase">Concessionária Autorizada</span>
+          </div>
+          <h1 class="text-xl sm:text-2xl font-extrabold font-heading text-white tracking-tight leading-none">
+            HONDA <span class="text-honda-red">NOSSAMOTO</span>
+          </h1>
+        </div>
+      </div>
+
+      <!-- CONSULTANT INFO & ACTIONS -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="hidden sm:flex flex-col text-right">
+          <span class="text-xs text-gray-400">Consultor Especialista</span>
+          <span class="text-base font-bold text-white flex items-center justify-end gap-1.5" id="headerConsultantName">
+            <i class="fa-solid fa-user-check text-red-500 text-xs"></i> Genesiano
+          </span>
+        </div>
+        
+        <button onclick="toggleAdminModal(true)" class="bg-honda-gray hover:bg-red-900/40 text-red-400 border border-red-800/50 px-3.5 py-2 rounded-xl text-xs sm:text-sm font-semibold transition flex items-center gap-2">
+          <i class="fa-solid fa-screwdriver-wrench text-red-500"></i>
+          <span>Painel Admin</span>
+        </button>
+
+        <a id="headerWhatsappBtn" href="#" target="_blank" class="bg-emerald-600 hover:bg-emerald-500 text-white px-3.5 py-2 rounded-xl text-xs sm:text-sm font-bold transition flex items-center gap-2 shadow-lg shadow-emerald-950/50">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          <span class="hidden md:inline">WhatsApp</span>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- BANNER HERO -->
+  <section class="relative bg-gradient-to-r from-black via-honda-darkgray to-black border-b border-zinc-800 py-8 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="space-y-3 text-center md:text-left max-w-2xl">
+        <div class="inline-flex items-center gap-2 bg-red-950/60 border border-red-800/60 text-red-400 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+          <i class="fa-solid fa-bolt"></i> Tabela Consórcio Honda 2026
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-white leading-tight">
+          Sua Honda Zero KM com o <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-rose-400">Consultor Genesiano</span>
+        </h2>
+        <p class="text-gray-300 text-xs sm:text-sm">
+          Confira abaixo o preço à vista e todas as opções de parcelas mensais sem juros diretamente na tela.
+        </p>
+      </div>
+
+      <!-- QUICK STATS / CONTACT BADGE -->
+      <div class="bg-honda-gray/90 border border-zinc-700/80 rounded-2xl p-4 flex items-center gap-4 shadow-xl w-full md:w-auto">
+        <div class="w-12 h-12 bg-red-600/20 border border-red-500/40 rounded-full flex items-center justify-center text-red-500 text-xl font-bold shrink-0">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <div>
+          <span class="text-[10px] text-gray-400 uppercase font-bold tracking-wider">Atendimento Direto</span>
+          <h4 class="text-sm font-bold text-white">Consultor Genesiano</h4>
+          <p class="text-xs text-emerald-400 flex items-center gap-1 font-medium mt-0.5">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Honda Nossamoto
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CATALOG -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow">
+    
+    <!-- CATEGORY & SEARCH FILTERS -->
+    <div class="flex flex-col md:flex-row gap-4 justify-between items-center mb-8">
+      <!-- CATEGORY TABS -->
+      <div class="flex items-center gap-2 overflow-x-auto w-full md:w-auto pb-2 md:pb-0 custom-scrollbar" id="categoryFilters">
+        <button onclick="filterCategory('all')" class="cat-btn active bg-honda-red text-white px-4 py-2 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap shadow-md transition">
+          Todas as Motos
+        </button>
+        <button onclick="filterCategory('street')" class="cat-btn bg-honda-gray hover:bg-zinc-700 text-gray-300 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition">
+          Street
+        </button>
+        <button onclick="filterCategory('trail')" class="cat-btn bg-honda-gray hover:bg-zinc-700 text-gray-300 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition">
+          Trail / Adventure
+        </button>
+        <button onclick="filterCategory('scooter')" class="cat-btn bg-honda-gray hover:bg-zinc-700 text-gray-300 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition">
+          Scooter / CUB
+        </button>
+        <button onclick="filterCategory('high')" class="cat-btn bg-honda-gray hover:bg-zinc-700 text-gray-300 px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition">
+          Alta Cilindrada
+        </button>
+      </div>
+
+      <!-- SEARCH INPUT -->
+      <div class="relative w-full md:w-72">
+        <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-3 text-gray-400 text-sm"></i>
+        <input type="text" id="searchInput" oninput="renderCatalog()" placeholder="Buscar modelo (ex: Biz, Titan)..." class="w-full bg-honda-gray text-white text-xs sm:text-sm pl-10 pr-4 py-2.5 rounded-xl border border-zinc-700 focus:outline-none focus:border-red-500 transition placeholder-gray-500">
+      </div>
+    </div>
+
+    <!-- CATALOG GRID -->
+    <div id="motoGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+      <!-- Moto cards populated dynamically -->
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-honda-black border-t border-zinc-800 text-gray-400 text-xs py-8 px-4 mt-12">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+      <div>
+        <h3 class="text-white font-bold text-sm font-heading">HONDA NOSSAMOTO</h3>
+        <p class="text-[11px] text-gray-500 mt-0.5">Consultor Autorizado: Genesiano | Atendimento Especializado em Consórcio e Vendas</p>
+      </div>
+      <div class="text-[11px] text-gray-500">
+        &copy; <span id="yearSpan"></span> Honda Nossamoto. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX / FULL IMAGE VIEW MODAL -->
+  <div id="imageModal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden" onclick="closeImageModal()">
+    <div class="relative max-w-4xl w-full flex flex-col items-center">
+      <button onclick="closeImageModal()" class="absolute -top-10 right-0 text-white text-2xl hover:text-red-500">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img id="modalImageTarget" src="" class="max-h-[85vh] max-w-full rounded-xl border border-zinc-700 object-contain shadow-2xl">
+      <p id="modalImageCaption" class="text-xs text-gray-300 mt-3 text-center font-semibold"></p>
+    </div>
+  </div>
+
+  <!-- ADMIN PANEL MODAL -->
+  <div id="adminModal" class="fixed inset-0 bg-black/80 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-honda-darkgray border border-zinc-700 w-full max-w-5xl rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col">
+      
+      <!-- MODAL HEADER -->
+      <div class="p-4 sm:p-5 bg-honda-black border-b border-zinc-800 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-red-600/20 border border-red-500/30 rounded-xl flex items-center justify-center text-red-500 font-bold">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <div>
+            <h3 class="text-base sm:text-lg font-bold text-white">Painel do Administrador</h3>
+            <p class="text-xs text-gray-400">Gerenciar Modelos, Preços à Vista e OCR de Tabelas</p>
+          </div>
+        </div>
+        <button onclick="toggleAdminModal(false)" class="text-gray-400 hover:text-white p-2 rounded-lg text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- MODAL BODY -->
+      <div class="p-4 sm:p-6 overflow-y-auto custom-scrollbar space-y-6 flex-grow">
+        
+        <!-- CONFIG & BACKUP SECTION -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          
+          <!-- CONSULTANT PHONE & NAME -->
+          <div class="bg-honda-gray p-4 rounded-xl border border-zinc-700/80 space-y-3">
+            <h4 class="text-xs font-bold text-gray-300 uppercase flex items-center gap-1.5">
+              <i class="fa-solid fa-user-gear text-red-500"></i> Dados do Consultor
+            </h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-[11px] text-gray-400 mb-1">Nome do Consultor</label>
+                <input type="text" id="consultantNameInput" value="Genesiano" class="bg-honda-black text-white px-3 py-1.5 rounded-lg border border-zinc-700 text-xs focus:border-red-500 focus:outline-none w-full">
+              </div>
+              <div>
+                <label class="block text-[11px] text-gray-400 mb-1">WhatsApp (com DDD)</label>
+                <input type="text" id="consultantPhoneInput" value="85999999999" class="bg-honda-black text-white px-3 py-1.5 rounded-lg border border-zinc-700 text-xs focus:border-red-500 focus:outline-none w-full">
+              </div>
+            </div>
+            <button onclick="saveConsultantInfo()" class="w-full bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 rounded-lg text-xs transition flex items-center justify-center gap-2">
+              <i class="fa-solid fa-floppy-disk"></i> Salvar Dados do Consultor
+            </button>
+          </div>
+
+          <!-- JSON BACKUP EXPORT / IMPORT -->
+          <div class="bg-honda-gray p-4 rounded-xl border border-zinc-700/80 space-y-3">
+            <h4 class="text-xs font-bold text-gray-300 uppercase flex items-center gap-1.5">
+              <i class="fa-solid fa-database text-red-500"></i> Backup & Restauração (JSON)
+            </h4>
+            <div class="flex flex-wrap gap-2 pt-1">
+              <button onclick="exportBackupJSON()" class="flex-1 bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-semibold py-2 px-3 rounded-lg border border-zinc-700 transition flex items-center justify-center gap-1.5">
+                <i class="fa-solid fa-download text-amber-400"></i> Exportar JSON
+              </button>
+              <label class="flex-1 bg-zinc-800 hover:bg-zinc-700 text-white text-xs font-semibold py-2 px-3 rounded-lg border border-zinc-700 transition flex items-center justify-center gap-1.5 cursor-pointer">
+                <i class="fa-solid fa-upload text-sky-400"></i> Importar JSON
+                <input type="file" id="importJsonFile" accept=".json" onchange="importBackupJSON(event)" class="hidden">
+              </label>
+              <button onclick="resetDefaultData()" class="bg-zinc-800 hover:bg-red-950/60 text-red-400 text-xs font-semibold py-2 px-3 rounded-lg border border-zinc-700 transition" title="Restaurar Padrões">
+                <i class="fa-solid fa-rotate-left"></i>
+              </button>
+            </div>
+            <p class="text-[10px] text-gray-500">Exporte um backup para salvar seus modelos ou restaurar em outro dispositivo.</p>
+          </div>
+
+        </div>
+
+        <!-- MOTO MANAGEMENT SECTION HEADER -->
+        <div class="flex flex-wrap justify-between items-center gap-3 border-b border-zinc-800 pb-3">
+          <h4 class="text-sm font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-list-check text-red-500"></i> Modelos no Catálogo
+          </h4>
+          <button onclick="openMotoEditor()" class="bg-honda-red hover:bg-red-700 text-white font-bold text-xs px-4 py-2 rounded-xl shadow-md transition flex items-center gap-1.5">
+            <i class="fa-solid fa-plus"></i> Cadastrar Nova Moto
+          </button>
+        </div>
+
+        <!-- MOTOS TABLE LIST -->
+        <div class="overflow-x-auto rounded-xl border border-zinc-800">
+          <table class="w-full text-left text-xs text-gray-300">
+            <thead class="bg-honda-black text-[11px] uppercase text-gray-400 border-b border-zinc-800">
+              <tr>
+                <th class="p-3">Destaque</th>
+                <th class="p-3">Foto / Modelo</th>
+                <th class="p-3">Categoria</th>
+                <th class="p-3">Preço à Vista</th>
+                <th class="p-3">Planos Configurados</th>
+                <th class="p-3 text-right">Ações</th>
+              </tr>
+            </thead>
+            <tbody id="adminMotoList" class="divide-y divide-zinc-800">
+              <!-- Dynamically filled -->
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- MOTO FORM EDITOR / OCR MODAL -->
+  <div id="motoEditorModal" class="fixed inset-0 bg-black/85 backdrop-blur-md z-50 flex items-center justify-center p-4 hidden">
+    <div class="bg-honda-darkgray border border-zinc-700 w-full max-w-3xl rounded-2xl shadow-2xl overflow-hidden max-h-[95vh] flex flex-col">
+      
+      <!-- FORM HEADER -->
+      <div class="p-4 bg-honda-black border-b border-zinc-800 flex justify-between items-center">
+        <h3 id="motoFormTitle" class="text-sm sm:text-base font-bold text-white">Cadastrar / Editar Modelo Honda</h3>
+        <button onclick="closeMotoEditor()" class="text-gray-400 hover:text-white p-1 text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- FORM BODY -->
+      <form id="motoForm" onsubmit="saveMotoForm(event)" class="p-4 sm:p-6 overflow-y-auto custom-scrollbar space-y-5 flex-grow">
+        <input type="hidden" id="editMotoId">
+
+        <!-- BASIC MOTO DATA -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Nome do Modelo *</label>
+            <input type="text" id="motoName" required placeholder="Ex: CG 160 Titan 2026" class="w-full bg-honda-black text-white p-2.5 rounded-lg border border-zinc-700 text-xs sm:text-sm focus:border-red-500 focus:outline-none">
+          </div>
+          <div>
+            <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Categoria *</label>
+            <select id="motoCategory" required class="w-full bg-honda-black text-white p-2.5 rounded-lg border border-zinc-700 text-xs sm:text-sm focus:border-red-500 focus:outline-none">
+              <option value="street">Street</option>
+              <option value="trail">Trail / Adventure</option>
+              <option value="scooter">Scooter / CUB</option>
+              <option value="high">Alta Cilindrada</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- PREÇO À VISTA & FEATURED TOGGLE -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div class="sm:col-span-2 bg-red-950/30 p-3 rounded-xl border border-red-900/60">
+            <label class="block text-xs font-bold text-red-400 uppercase mb-1 flex items-center gap-1.5">
+              <i class="fa-solid fa-tag text-red-500"></i> Preço à Vista (R$) *
+            </label>
+            <div class="relative">
+              <span class="absolute left-3 top-2 text-gray-400 font-bold text-xs">R$</span>
+              <input type="text" id="motoCashPrice" required placeholder="22.490,00" class="w-full bg-honda-black text-white font-extrabold pl-9 pr-3 py-2 rounded-lg border border-zinc-700 text-sm focus:border-red-500 focus:outline-none">
+            </div>
+          </div>
+
+          <div class="bg-zinc-900 p-3 rounded-xl border border-zinc-800 flex items-center justify-between">
+            <div>
+              <label class="block text-xs font-bold text-gray-300 uppercase">Destaque</label>
+              <p class="text-[10px] text-gray-500">Selo especial no catálogo</p>
+            </div>
+            <input type="checkbox" id="motoFeatured" class="w-5 h-5 accent-red-600 rounded cursor-pointer">
+          </div>
+        </div>
+
+        <!-- DESCRIPTION BREVE -->
+        <div>
+          <label class="block text-xs font-bold text-gray-300 uppercase mb-1">Descrição Breve / Diferenciais</label>
+
+          <input type="text" id="motoDescription" placeholder="Ex: Freios ABS, Painel Digital, Motor 160cc FlexOne" class="w-full bg-honda-black text-white p-2.5 rounded-lg border border-zinc-700 text-xs focus:border-red-500 focus:outline-none">
+        </div>
+
+        <!-- PHOTOS UPLOAD SECTION -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          
+          <!-- MOTO PHOTO -->
+          <div class="bg-zinc-900 p-3.5 rounded-xl border border-zinc-800 space-y-2">
+            <label class="block text-xs font-bold text-gray-300 uppercase">Foto do Modelo da Moto</label>
+            <input type="file" id="motoImageFile" accept="image/*" onchange="handleImageUpload(event, 'moto')" class="w-full text-[11px] text-gray-400 bg-honda-black p-2 rounded-lg border border-zinc-700 file:mr-2 file:py-1 file:px-2.5 file:rounded file:border-0 file:text-[11px] file:font-semibold file:bg-honda-red file:text-white hover:file:bg-red-700 cursor-pointer">
+            <input type="url" id="motoImageUrl" placeholder="Ou cole a URL da imagem da moto" oninput="previewImage('moto')" class="w-full bg-honda-black text-white p-2 rounded-lg border border-zinc-700 text-xs focus:outline-none">
+            
+            <div id="motoImgPreview" class="h-28 bg-honda-black rounded-lg border border-zinc-800 flex items-center justify-center overflow-hidden">
+              <span class="text-xs text-gray-600">Sem foto da moto</span>
+            </div>
+          </div>
+
+          <!-- PLAN TABLE PHOTO & OCR TRIGGER -->
+          <div class="bg-zinc-900 p-3.5 rounded-xl border border-zinc-800 space-y-2">
+            <label class="block text-xs font-bold text-gray-300 uppercase">Foto da Tabela de Planos</label>
+            <input type="file" id="planImageFile" accept="image/*" onchange="handlePlanImageUploadAndOCR(event)" class="w-full text-[11px] text-gray-400 bg-honda-black p-2 rounded-lg border border-zinc-700 file:mr-2 file:py-1 file:px-2.5 file:rounded file:border-0 file:text-[11px] file:font-semibold file:bg-zinc-700 file:text-white hover:file:bg-zinc-600 cursor-pointer">
+            <input type="url" id="planImageUrl" placeholder="Ou cole a URL da foto da tabela" oninput="previewImage('plan')" class="w-full bg-honda-black text-white p-2 rounded-lg border border-zinc-700 text-xs focus:outline-none">
+
+            <div id="planImgPreview" class="h-28 bg-honda-black rounded-lg border border-zinc-800 flex items-center justify-center overflow-hidden">
+              <span class="text-xs text-gray-600">Sem foto da tabela</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- OCR PROCESSOR DEDICATED SECTION -->
+        <div class="bg-gradient-to-r from-red-950/40 via-zinc-900 to-zinc-900 p-4 rounded-xl border border-red-900/50 space-y-3">
+          <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3">
+            <div>
+              <h4 class="text-xs sm:text-sm font-bold text-white flex items-center gap-2">
+                <i class="fa-solid fa-wand-magic-sparkles text-amber-400"></i> Leitor Inteligente de Tabela (OCR / Tesseract.js)
+              </h4>
+              <p class="text-[11px] text-gray-400">Carregue a foto da tabela para extrair parcelas (12x, 24x, 36x, 48x, 60x, 72x, 80x) automaticamente.</p>
+            </div>
+            <button type="button" onclick="runOCRScan()" id="ocrScanBtn" class="bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-500 hover:to-amber-400 text-white font-extrabold text-xs px-4 py-2.5 rounded-xl transition-all shadow-lg flex items-center gap-2 shrink-0">
+              <i class="fa-solid fa-camera-retro"></i>
+              <span>Carregar Tabela e Preencher Automaticamente</span>
+            </button>
+          </div>
+
+          <!-- PROGRESS BAR FOR OCR -->
+          <div id="ocrStatusContainer" class="hidden space-y-1.5 pt-1">
+            <div class="flex justify-between text-[11px] text-amber-400 font-semibold">
+              <span id="ocrStatusText"><i class="fa-solid fa-spinner animate-spin"></i> Lendo imagem...</span>
+              <span id="ocrStatusPercent">0%</span>
+            </div>
+            <div class="w-full bg-zinc-800 rounded-full h-2.5 overflow-hidden border border-zinc-700">
+              <div id="ocrProgressBar" class="bg-gradient-to-r from-amber-500 to-yellow-400 h-2.5 transition-all duration-200" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GALERIA DE CORES DA MOTO -->
+        <div class="bg-zinc-900 p-4 rounded-xl border border-zinc-800 space-y-3">
+          <div class="flex justify-between items-center">
+            <div>
+              <h4 class="text-xs font-bold text-gray-300 uppercase flex items-center gap-1.5">
+                <i class="fa-solid fa-palette text-red-500"></i> Galeria de Cores e Fotos
+              </h4>
+              <p class="text-[10px] text-gray-500">Adicione fotos das diferentes cores disponíveis para o cliente selecionar</p>
+            </div>
+            <button type="button" onclick="addColorRow()" class="text-xs bg-honda-red hover:bg-red-700 text-white font-bold px-3 py-1.5 rounded-lg transition flex items-center gap-1">
+              <i class="fa-solid fa-plus"></i> Adicionar Cor
+            </button>
+          </div>
+
+          <div id="colorsContainer" class="space-y-3">
+            <!-- Dynamic color rows will be injected here -->
+          </div>
+        </div>
+
+        <!-- CONSORTIUM PLAN VALUES EDITOR (MANUAL & OCR POPULATED) -->
+        <div>
+          <div class="flex flex-wrap justify-between items-center gap-2 mb-2">
+            <label class="block text-xs font-bold text-gray-300 uppercase">Planos do Consórcio (Prazos e Parcelas R$)</label>
+            
+            <!-- ATALHOS RÁPIDOS PARA INSERIR PRAZOS -->
+            <div class="flex flex-wrap items-center gap-1 text-[11px]">
+              <span class="text-gray-400 font-semibold">Adicionar prazo:</span>
+              <button type="button" onclick="addPlanRow('12x', '')" class="bg-zinc-800 hover:bg-red-900/60 text-red-400 px-2 py-0.5 rounded border border-zinc-700 font-bold">12x</button>
+              <button type="button" onclick="addPlanRow('24x', '')" class="bg-zinc-800 hover:bg-red-900/60 text-red-400 px-2 py-0.5 rounded border border-zinc-700 font-bold">24x</button>
+              <button type="button" onclick="addPlanRow('36x', '')" class="bg-zinc-800 hover:bg-zinc-700 text-gray-300 px-2 py-0.5 rounded border border-zinc-700 font-bold">36x</button>
+              <button type="button" onclick="addPlanRow('48x', '')" class="bg-zinc-800 hover:bg-zinc-700 text-gray-300 px-2 py-0.5 rounded border border-zinc-700 font-bold">48x</button>
+              <button type="button" onclick="addPlanRow('60x', '')" class="bg-zinc-800 hover:bg-zinc-700 text-gray-300 px-2 py-0.5 rounded border border-zinc-700 font-bold">60x</button>
+              <button type="button" onclick="addPlanRow('72x', '')" class="bg-zinc-800 hover:bg-zinc-700 text-gray-300 px-2 py-0.5 rounded border border-zinc-700 font-bold">72x</button>
+              <button type="button" onclick="addPlanRow('80x', '')" class="bg-zinc-800 hover:bg-zinc-700 text-gray-300 px-2 py-0.5 rounded border border-zinc-700 font-bold">80x</button>
+            </div>
+          </div>
+          
+          <div class="overflow-x-auto border border-zinc-800 rounded-xl bg-honda-black">
+            <table class="w-full text-left text-xs text-gray-300">
+              <thead class="bg-zinc-900 uppercase text-[11px] text-gray-400 border-b border-zinc-800">
+                <tr>
+                  <th class="p-2.5">Prazo (ex: 12x, 24x, 36x, 60x, 80x)</th>
+                  <th class="p-2.5">Valor Parcela (R$)</th>
+                  <th class="p-2.5 text-center w-12">Excluir</th>
+                </tr>
+              </thead>
+              <tbody id="plansTableBody" class="divide-y divide-zinc-800">
+                <!-- Rows injected dynamically -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- CONSORTIUM PLAN VALUES EDITOR (MANUAL & OCR POPULATED) -->
+        <div>
+          <div class="flex justify-between items-center mb-2">
+            <label class="block text-xs font-bold text-gray-300 uppercase">Planos do Consórcio (Prazos e Parcelas R$)</label>
+            <button type="button" onclick="addPlanRow()" class="text-xs bg-zinc-800 hover:bg-zinc-700 text-red-400 px-2.5 py-1 rounded border border-zinc-700 transition">
+              <i class="fa-solid fa-plus"></i> Adicionar Linha
+            </button>
+          </div>
+          
+          <div class="overflow-x-auto border border-zinc-800 rounded-xl bg-honda-black">
+            <table class="w-full text-left text-xs text-gray-300">
+              <thead class="bg-zinc-900 uppercase text-[11px] text-gray-400 border-b border-zinc-800">
+                <tr>
+                  <th class="p-2.5">Prazo (ex: 36x, 60x, 72x, 80x)</th>
+                  <th class="p-2.5">Valor Parcela (R$)</th>
+                  <th class="p-2.5 text-center w-12">Excluir</th>
+                </tr>
+              </thead>
+              <tbody id="plansTableBody" class="divide-y divide-zinc-800">
+                <!-- Rows injected dynamically -->
+              </tbody>
+            </table>
+          </div>
+          <p class="text-[10px] text-gray-500 mt-1">Estes valores aparecerão IMEDIATAMENTE nos cards do catálogo do cliente.</p>
+        </div>
+
+        <!-- SUBMIT BUTTONS -->
+        <div class="flex justify-end gap-3 pt-3 border-t border-zinc-800">
+          <button type="button" onclick="closeMotoEditor()" class="bg-zinc-800 hover:bg-zinc-700 text-gray-300 font-semibold text-xs px-4 py-2 rounded-xl transition">
+            Cancelar
+          </button>
+          <button type="submit" class="bg-honda-red hover:bg-red-700 text-white font-bold text-xs px-6 py-2 rounded-xl shadow-lg transition flex items-center gap-2">
+            <i class="fa-solid fa-floppy-disk"></i> Salvar Modelo
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT APPLICATION LOGIC -->
+  <script>
+    const DEFAULT_CONSULTANT_PHONE = "85999999999";
+    const DEFAULT_CONSULTANT_NAME = "Genesiano";
+
+    const INITIAL_MOTOS = [
+      {
+        id: "101",
+        name: "CG 160 Titan ESD 2026",
+        category: "street",
+        cashPrice: "22.490,00",
+        description: "Motor 160cc FlexOne, Freios CBS, Painel Digital e Rodas de Liga Leve",
+        featured: true,
+        motoImg: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80",
+        planImg: "https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80",
+        colors: [
+          { name: "Vermelho Perolizado", img: "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80" },
+          { name: "Preto Fosco", img: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80" },
+          { name: "Prata Metálico", img: "https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&w=800&q=80" }
+        ],
+        plans: [
+          { months: "12x", installment: "2.120,00" },
+          { months: "24x", installment: "1.105,00" },
+          { months: "36x", installment: "785,40" },
+          { months: "60x", installment: "482,90" },
+          { months: "72x", installment: "412,15" },
+          { months: "80x", installment: "378,50" }
+        ]
+      },
+      {
+        id: "102",
+        name: "CB 300F Twister ABS",
+        category: "street",
+        cashPrice: "25.990,00",
+        description: "Iluminação Full LED, Embreagem Deslizante e Freio ABS de dois canais",
+        featured: true,
+        motoImg: "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=800&q=80",
+        planImg: "",
+        plans: [
+          { months: "36x", installment: "912,00" },
+          { months: "60x", installment: "565,30" },
+          { months: "72x", installment: "481,20" },
+          { months: "80x", installment: "439,90" }
+        ]
+      },
+      {
+        id: "103",
+        name: "NXR 160 Bros ESDD",
+        category: "trail",
+        cashPrice: "23.850,00",
+        description: "Suspensão de longo curso, Painel Digital com indicador de marchas",
+        featured: false,
+        motoImg: "https://images.unsplash.com/photo-1591637333184-19aa84b3e01f?auto=format&fit=crop&w=800&q=80",
+        planImg: "",
+        plans: [
+          { months: "36x", installment: "835,10" },
+          { months: "60x", installment: "515,60" },
+          { months: "72x", installment: "440,00" },
+          { months: "80x", installment: "399,80" }
+        ]
+      },
+      {
+        id: "104",
+        name: "Biz 125 ES / EX",
+        category: "scooter",
+        cashPrice: "18.200,00",
+        description: "Tomada 12V, Porta-objetos espaçoso, Câmbio semi-automático",
+        featured: false,
+        motoImg: "https://images.unsplash.com/photo-1525160354320-d8e92641c563?auto=format&fit=crop&w=800&q=80",
+        planImg: "",
+        plans: [
+          { months: "36x", installment: "638,00" },
+          { months: "60x", installment: "392,50" },
+          { months: "72x", installment: "335,00" },
+          { months: "80x", installment: "305,20" }
+        ]
+      },
+      {
+        id: "105",
+        name: "Sahara 300 Rally / ABS",
+        category: "trail",
+        cashPrice: "32.900,00",
+        description: "Motor 300cc, Painel Completo, Entrada USB-C e Para-brisa de fábrica",
+        featured: true,
+        motoImg: "https://images.unsplash.com/photo-1509198397868-475647b2a1e5?auto=format&fit=crop&w=800&q=80",
+        planImg: "",
+        plans: [
+          { months: "36x", installment: "1.150,00" },
+          { months: "60x", installment: "712,00" },
+          { months: "72x", installment: "608,00" },
+          { months: "80x", installment: "558,00" }
+        ]
+      }
+    ];
+
+    let motosData = [];
+    let consultantName = DEFAULT_CONSULTANT_NAME;
+    let consultantPhone = DEFAULT_CONSULTANT_PHONE;
+    let activeCategory = 'all';
+
+    function initData() {
+      const storedMotos = localStorage.getItem('nossamoto_motos');
+      if (storedMotos) {
+        try {
+          motosData = JSON.parse(storedMotos);
+        } catch(e) {
+          motosData = INITIAL_MOTOS;
+        }
+      } else {
+        motosData = INITIAL_MOTOS;
+        saveMotosToStorage();
+      }
+
+      const storedName = localStorage.getItem('nossamoto_consultant_name');
+      if (storedName) consultantName = storedName;
+
+      const storedPhone = localStorage.getItem('nossamoto_consultant_phone');
+      if (storedPhone) consultantPhone = storedPhone;
+
+      document.getElementById('consultantNameInput').value = consultantName;
+      document.getElementById('consultantPhoneInput').value = consultantPhone;
+      document.getElementById('headerConsultantName').innerHTML = `<i class="fa-solid fa-user-check text-red-500 text-xs"></i> ${consultantName}`;
+      document.getElementById('yearSpan').textContent = new Date().getFullYear();
+
+      updateWhatsappLinks();
+      renderCatalog();
+      renderAdminList();
+    }
+
+    function saveMotosToStorage() {
+      localStorage.setItem('nossamoto_motos', JSON.stringify(motosData));
+    }
+
+    function updateWhatsappLinks() {
+      const headerBtn = document.getElementById('headerWhatsappBtn');
+      if (headerBtn) {
+        headerBtn.href = `https://wa.me/55${consultantPhone}?text=${encodeURIComponent('Olá Consultor ' + consultantName + '! Gostaria de informações sobre Consórcio Honda.')}`;
+      }
+    }
+
+    function filterCategory(cat) {
+      activeCategory = cat;
+      const buttons = document.querySelectorAll('.cat-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('active', 'bg-honda-red', 'text-white');
+        btn.classList.add('bg-honda-gray', 'text-gray-300');
+      });
+
+      const clickedBtn = event ? event.currentTarget : null;
+      if (clickedBtn) {
+        clickedBtn.classList.remove('bg-honda-gray', 'text-gray-300');
+        clickedBtn.classList.add('active', 'bg-honda-red', 'text-white');
+      }
+
+      renderCatalog();
+    }
+
+    function getCategoryLabel(cat) {
+      switch(cat) {
+        case 'street': return 'Street';
+        case 'trail': return 'Trail / Adventure';
+        case 'scooter': return 'Scooter / CUB';
+        case 'high': return 'Alta Cilindrada';
+        default: return 'Moto';
+      }
+    }
+
+    function renderCatalog() {
+      const grid = document.getElementById('motoGrid');
+      const search = document.getElementById('searchInput').value.toLowerCase();
+
+      const filtered = motosData.filter(m => {
+        const matchesCategory = activeCategory === 'all' || m.category === activeCategory;
+        const matchesSearch = m.name.toLowerCase().includes(search);
+        return matchesCategory && matchesSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-12 text-center text-gray-500 bg-honda-darkgray rounded-2xl border border-zinc-800">
+            <i class="fa-solid fa-motorcycle text-4xl mb-3 text-zinc-600"></i>
+            <p class="text-base font-semibold">Nenhum modelo encontrado.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(moto => {
+        const plansHtml = moto.plans && moto.plans.length > 0
+          ? moto.plans.map(p => `
+              <div class="bg-honda-black/80 border border-zinc-800 rounded-lg p-2 text-center transition hover:border-red-900/60">
+                <span class="block text-[10px] uppercase tracking-wider text-gray-400 font-bold">${p.months}</span>
+                <span class="block text-xs font-extrabold text-white mt-0.5">R$ ${p.installment}</span>
+              </div>
+            `).join('')
+          : `<div class="col-span-full text-center text-xs text-gray-500 py-2">Planos em atualização pelo consultor.</div>`;
+
+        const colors = (moto.colors && moto.colors.length > 0) 
+          ? moto.colors 
+          : [{ name: 'Padrão', img: moto.motoImg || "https://placehold.co/600x400/222222/CCCCCC?text=Honda+Nossamoto" }];
+
+        const currentActiveImg = colors[0].img;
+
+        const colorsSelectorHtml = colors.length > 1 ? `
+          <div class="mt-3 pt-2 border-t border-zinc-800">
+            <span class="text-[10px] uppercase tracking-wider text-gray-400 font-bold block mb-1.5">
+              <i class="fa-solid fa-palette text-red-500"></i> Cores Disponíveis:
+            </span>
+            <div class="flex flex-wrap items-center gap-1.5">
+              ${colors.map((c, idx) => `
+                <button type="button" onclick="changeCardColor('${moto.id}', '${c.img}', '${c.name}', this)" class="color-chip ${idx === 0 ? 'border-red-500 bg-red-950/50' : 'border-zinc-700 bg-zinc-900'} hover:border-red-500 text-[10px] font-semibold text-gray-200 px-2.5 py-1 rounded-lg border flex items-center gap-1.5 transition">
+                  <span class="w-2 h-2 rounded-full ${getColorDotClass(c.name)}"></span>
+                  <span>${c.name}</span>
+                </button>
+              `).join('')}
+            </div>
+          </div>
+        ` : '';
+
+        const waText = encodeURIComponent(
+          `Olá Consultor ${consultantName}! Vi no catálogo da Honda Nossamoto a moto *${moto.name}* com Preço à Vista de *R$ ${moto.cashPrice}* e gostaria de simular o Consórcio!`
+        );
+
+        return `
+          <div class="glass-card rounded-2xl overflow-hidden shadow-2xl hover:border-red-600/50 transition-all duration-300 flex flex-col justify-between group">
+            
+            <div>
+              <div class="relative h-56 bg-gradient-to-b from-zinc-900 to-honda-black overflow-hidden">
+                <img id="moto-img-${moto.id}" src="${currentActiveImg}" alt="${moto.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/600x400/222222/CCCCCC?text=Honda+Nossamoto'">
+                
+                <div class="absolute top-3 right-3 badge-cash-price px-3 py-1.5 rounded-xl text-right border border-red-400/30">
+                  <span class="block text-[9px] uppercase tracking-widest text-red-100 font-bold">Preço à Vista</span>
+                  <span class="text-base font-black text-white tracking-tight">R$ ${moto.cashPrice}</span>
+                </div>
+
+                <div class="absolute top-3 left-3 flex flex-col gap-1 items-start">
+                  <span class="bg-black/70 backdrop-blur-md border border-white/10 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-md uppercase">
+                    ${getCategoryLabel(moto.category)}
+                  </span>
+                  ${moto.featured ? `
+                    <span class="bg-amber-500 text-black font-extrabold text-[9px] px-2 py-0.5 rounded-md uppercase tracking-wider shadow">
+                      <i class="fa-solid fa-star text-[8px]"></i> Destaque
+                    </span>
+                  ` : ''}
+                </div>
+
+                ${moto.planImg ? `
+                  <button onclick="openImageModal('${moto.planImg}', 'Tabela de Planos Oficial - ${moto.name}')" class="absolute bottom-3 left-3 bg-zinc-900/90 hover:bg-red-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-md border border-zinc-700 flex items-center gap-1 transition shadow">
+                    <i class="fa-solid fa-table"></i> Ampliar Tabela Oficial
+                  </button>
+                ` : ''}
+              </div>
+
+              <div class="p-5">
+                <h3 class="text-lg font-black font-heading text-white tracking-tight group-hover:text-red-400 transition-colors">
+                  ${moto.name}
+                </h3>
+                
+                ${moto.description ? `
+                  <p class="text-xs text-gray-400 mt-1 line-clamp-2">${moto.description}</p>
+                ` : ''}
+
+                ${colorsSelectorHtml}
+
+                <div class="mt-4 pt-3 border-t border-zinc-800/80">
+                  <div class="flex justify-between items-center mb-2">
+                    <span class="text-xs font-bold text-gray-300 uppercase tracking-wide flex items-center gap-1.5">
+                      <i class="fa-solid fa-chart-pie text-red-500"></i> Planos de Consórcio Honda:
+                    </span>
+                    <span class="text-[10px] bg-red-950/80 text-red-400 px-2 py-0.5 rounded font-semibold border border-red-900/50">Sem Juros</span>
+                  </div>
+
+                  <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                    ${plansHtml}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="p-5 pt-0">
+              <a href="https://wa.me/55${consultantPhone}?text=${waText}" target="_blank" class="w-full bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold py-3 px-4 rounded-xl text-xs sm:text-sm transition-all duration-300 flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/50 group-hover:scale-[1.02]">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Simular no WhatsApp com Genesiano</span>
+              </a>
+            </div>
+
+          </div>
+        `;
+      }).join('');
+    }
+
+    function changeCardColor(motoId, imgUrl, colorName, btnEl) {
+      const imgTarget = document.getElementById(`moto-img-${motoId}`);
+      if (imgTarget) {
+        imgTarget.src = imgUrl;
+      }
+      const parent = btnEl.parentElement;
+      const chips = parent.querySelectorAll('.color-chip');
+      chips.forEach(c => {
+        c.classList.remove('border-red-500', 'bg-red-950/50');
+        c.classList.add('border-zinc-700', 'bg-zinc-900');
+      });
+      btnEl.classList.remove('border-zinc-700', 'bg-zinc-900');
+      btnEl.classList.add('border-red-500', 'bg-red-950/50');
+    }
+
+    function getColorDotClass(name) {
+      const lower = name.toLowerCase();
+      if (lower.includes('vermelh')) return 'bg-red-500';
+      if (lower.includes('pret') || lower.includes('escuro')) return 'bg-zinc-900 border border-zinc-500';
+      if (lower.includes('prat') || lower.includes('cinza')) return 'bg-gray-300';
+      if (lower.includes('azul')) return 'bg-blue-500';
+      if (lower.includes('branc')) return 'bg-white';
+      if (lower.includes('amarel') || lower.includes('dourad')) return 'bg-amber-400';
+      return 'bg-red-500';
+    }
+
+    function toggleAdminModal(show) {
+      const modal = document.getElementById('adminModal');
+      if (show) {
+        renderAdminList();
+        modal.classList.remove('hidden');
+      } else {
+        modal.classList.add('hidden');
+      }
+    }
+
+    function openImageModal(imgSrc, caption) {
+      const modal = document.getElementById('imageModal');
+      document.getElementById('modalImageTarget').src = imgSrc;
+      document.getElementById('modalImageCaption').textContent = caption;
+      modal.classList.remove('hidden');
+    }
+
+    function closeImageModal() {
+      document.getElementById('imageModal').classList.add('hidden');
+    }
+
+    function saveConsultantInfo() {
+      const name = document.getElementById('consultantNameInput').value.trim();
+      const phone = document.getElementById('consultantPhoneInput').value.trim();
+
+      if (name) {
+        consultantName = name;
+        localStorage.setItem('nossamoto_consultant_name', name);
+      }
+      if (phone) {
+        consultantPhone = phone.replace(/\D/g, '');
+        localStorage.setItem('nossamoto_consultant_phone', consultantPhone);
+      }
+
+      document.getElementById('headerConsultantName').innerHTML = `<i class="fa-solid fa-user-check text-red-500 text-xs"></i> ${consultantName}`;
+      updateWhatsappLinks();
+      renderCatalog();
+      alert('Dados do consultor atualizados com sucesso!');
+    }
+
+    function renderAdminList() {
+      const tbody = document.getElementById('adminMotoList');
+      if (!tbody) return;
+
+      tbody.innerHTML = motosData.map(moto => `
+        <tr class="hover:bg-zinc-900/50">
+          <td class="p-3">
+            ${moto.featured ? '<span class="text-amber-400"><i class="fa-solid fa-star"></i> Sim</span>' : '<span class="text-gray-600">Não</span>'}
+          </td>
+          <td class="p-3 font-semibold text-white flex items-center gap-2">
+            <img src="${moto.motoImg || 'https://placehold.co/100'}" class="w-8 h-8 rounded object-cover border border-zinc-700" onerror="this.src='https://placehold.co/100'">
+            ${moto.name}
+          </td>
+          <td class="p-3 uppercase text-[10px] text-gray-400">${getCategoryLabel(moto.category)}</td>
+          <td class="p-3 text-red-400 font-bold">R$ ${moto.cashPrice}</td>
+          <td class="p-3 text-gray-400">${moto.plans ? moto.plans.length : 0} prazos</td>
+          <td class="p-3 text-right space-x-2">
+            <button onclick="openMotoEditor('${moto.id}')" class="bg-zinc-800 hover:bg-zinc-700 text-amber-400 px-2.5 py-1 rounded text-xs">
+              <i class="fa-solid fa-pen"></i>
+            </button>
+            <button onclick="deleteMoto('${moto.id}')" class="bg-zinc-800 hover:bg-red-950 text-red-400 px-2.5 py-1 rounded text-xs">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function deleteMoto(id) {
+      if (confirm('Tem certeza que deseja excluir este modelo?')) {
+        motosData = motosData.filter(m => m.id !== id);
+        saveMotosToStorage();
+        renderCatalog();
+        renderAdminList();
+      }
+    }
+
+    function addPlanRow(months = '', installment = '') {
+      const tbody = document.getElementById('plansTableBody');
+      const row = document.createElement('tr');
+      row.className = 'hover:bg-zinc-900/50';
+      row.innerHTML = `
+        <td class="p-2">
+          <input type="text" value="${months}" placeholder="ex: 36x" class="plan-months bg-zinc-900 text-white p-1.5 rounded border border-zinc-700 text-xs w-full focus:outline-none focus:border-red-500">
+        </td>
+        <td class="p-2">
+          <input type="text" value="${installment}" placeholder="ex: 450,00" class="plan-installment bg-zinc-900 text-white p-1.5 rounded border border-zinc-700 text-xs w-full focus:outline-none focus:border-red-500">
+        </td>
+        <td class="p-2 text-center">
+          <button type="button" onclick="this.closest('tr').remove()" class="text-red-400 hover:text-red-300 p-1">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </td>
+      `;
+      tbody.appendChild(row);
+    }
+
+    function addColorRow(colorName = '', colorImg = '') {
+      const container = document.getElementById('colorsContainer');
+      const rowId = Date.now() + Math.random().toString(36).substring(2, 5);
+      const div = document.createElement('div');
+      div.className = 'color-row bg-honda-black p-3 rounded-lg border border-zinc-800 space-y-2';
+      div.innerHTML = `
+        <div class="flex items-center justify-between gap-2">
+          <input type="text" value="${colorName}" placeholder="Nome da Cor (ex: Vermelho Perolizado, Preto Fosco)" class="color-name-input bg-zinc-900 text-white p-1.5 rounded border border-zinc-700 text-xs focus:outline-none focus:border-red-500 flex-1">
+          <button type="button" onclick="this.closest('.color-row').remove()" class="text-red-400 hover:text-red-300 p-1">
+            <i class="fa-solid fa-trash text-xs"></i>
+          </button>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <input type="file" accept="image/*" onchange="handleColorImageFile(event, '${rowId}')" class="text-[10px] text-gray-400 bg-zinc-900 p-1 rounded border border-zinc-700 file:mr-2 file:py-0.5 file:px-2 file:rounded file:border-0 file:text-[10px] file:bg-zinc-700 file:text-white cursor-pointer">
+          <input type="url" id="color-url-${rowId}" value="${colorImg}" placeholder="Ou cole a URL da imagem da cor" class="color-url-input bg-zinc-900 text-white p-1.5 rounded border border-zinc-700 text-xs focus:outline-none focus:border-red-500">
+        </div>
+      `;
+      container.appendChild(div);
+    }
+
+    function handleColorImageFile(event, rowId) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        document.getElementById(`color-url-${rowId}`).value = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function handleImageUpload(event, target) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        if (target === 'moto') {
+          document.getElementById('motoImageUrl').value = e.target.result;
+          previewImage('moto');
+        } else if (target === 'plan') {
+          document.getElementById('planImageUrl').value = e.target.result;
+          previewImage('plan');
+        }
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function previewImage(target) {
+      if (target === 'moto') {
+        const url = document.getElementById('motoImageUrl').value;
+        const container = document.getElementById('motoImgPreview');
+        container.innerHTML = url ? `<img src="${url}" class="h-full w-full object-cover rounded-lg">` : '<span class="text-xs text-gray-600">Sem foto da moto</span>';
+      } else if (target === 'plan') {
+        const url = document.getElementById('planImageUrl').value;
+        const container = document.getElementById('planImgPreview');
+        container.innerHTML = url ? `<img src="${url}" class="h-full w-full object-cover rounded-lg">` : '<span class="text-xs text-gray-600">Sem foto da tabela</span>';
+      }
+    }
+
+    function handlePlanImageUploadAndOCR(event) {
+      handleImageUpload(event, 'plan');
+      setTimeout(() => {
+        runOCRScan();
+      }, 300);
+    }
+
+    function runOCRScan() {
+      const imgUrl = document.getElementById('planImageUrl').value;
+      if (!imgUrl) {
+        alert("Carregue uma imagem da tabela de planos primeiro para executar o leitor OCR.");
+        return;
+      }
+
+      const statusContainer = document.getElementById('ocrStatusContainer');
+      const statusText = document.getElementById('ocrStatusText');
+      const statusPercent = document.getElementById('ocrStatusPercent');
+      const progressBar = document.getElementById('ocrProgressBar');
+
+      statusContainer.classList.remove('hidden');
+      statusText.innerHTML = '<i class="fa-solid fa-spinner animate-spin"></i> Inicializando leitor OCR...';
+      statusPercent.textContent = '0%';
+      progressBar.style.width = '0%';
+
+      Tesseract.recognize(imgUrl, 'por', {
+        logger: m => {
+          if (m.status === 'recognizing text') {
+            const pct = Math.round((m.progress || 0) * 100);
+            statusText.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> Lendo parcelas e prazos...`;
+            statusPercent.textContent = pct + '%';
+            progressBar.style.width = pct + '%';
+          }
+        }
+      }).then(({ data: { text } }) => {
+        statusText.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-400"></i> Leitura concluída!';
+        statusPercent.textContent = '100%';
+        progressBar.style.width = '100%';
+        parseAndPopulateOCRPlans(text);
+        setTimeout(() => statusContainer.classList.add('hidden'), 3000);
+      }).catch(err => {
+        console.error(err);
+        statusText.innerHTML = '<i class="fa-solid fa-triangle-exclamation text-red-400"></i> Erro ao ler imagem.';
+        alert("Não foi possível ler os dados automaticamente da foto. Os prazos padrão foram inseridos para preenchimento manual.");
+        addDefaultPlanRows();
+      });
+    }
+
+    function addDefaultPlanRows() {
+      addPlanRow('12x', '');
+      addPlanRow('24x', '');
+      addPlanRow('36x', '');
+      addPlanRow('60x', '');
+      addPlanRow('72x', '');
+      addPlanRow('80x', '');
+    }
+
+    function parseAndPopulateOCRPlans(text) {
+      const tbody = document.getElementById('plansTableBody');
+      tbody.innerHTML = '';
+
+      const planRegex = /(\d{2})\s*[xX]\s*(?:R\$\s*)?(\d{2,4}[\.,]\d{2})/g;
+      let match;
+      let count = 0;
+      const foundMonths = new Set();
+
+      while ((match = planRegex.exec(text)) !== null) {
+        const months = match[1] + 'x';
+        const installment = match[2].replace('.', ',');
+        addPlanRow(months, installment);
+        foundMonths.add(months);
+        count++;
+      }
+
+      if (count === 0) {
+        const lines = text.split('\n');
+        const targetTerms = ['12', '24', '36', '48', '60', '72', '80'];
+        
+        lines.forEach(line => {
+          targetTerms.forEach(term => {
+            if (line.includes(term) && !foundMonths.has(term + 'x')) {
+              const numbers = line.match(/\d+[\.,]\d{2}/g);
+              if (numbers && numbers.length >= 1) {
+                addPlanRow(term + 'x', numbers[0]);
+                foundMonths.add(term + 'x');
+                count++;
+              }
+            }
+          });
+        });
+      }
+
+      if (count === 0) {
+        alert("O leitor OCR concluiu a leitura, mas não encontrou o padrão de parcelas. Os prazos padrão foram inseridos para você preencher manualmente.");
+        addDefaultPlanRows();
+      }
+    }
+
+    function openMotoEditor(motoId = null) {
+      const modal = document.getElementById('motoEditorModal');
+      const title = document.getElementById('motoFormTitle');
+      const tbody = document.getElementById('plansTableBody');
+      const colorsContainer = document.getElementById('colorsContainer');
+      tbody.innerHTML = '';
+      colorsContainer.innerHTML = '';
+
+      if (motoId) {
+        title.textContent = 'Editar Modelo Honda';
+        const moto = motosData.find(m => m.id === motoId);
+        document.getElementById('editMotoId').value = moto.id;
+        document.getElementById('motoName').value = moto.name;
+        document.getElementById('motoCategory').value = moto.category;
+        document.getElementById('motoCashPrice').value = moto.cashPrice;
+        document.getElementById('motoDescription').value = moto.description || '';
+        document.getElementById('motoFeatured').checked = !!moto.featured;
+        document.getElementById('motoImageUrl').value = moto.motoImg || '';
+        document.getElementById('planImageUrl').value = moto.planImg || '';
+        
+        previewImage('moto');
+        previewImage('plan');
+
+        if (moto.colors && moto.colors.length > 0) {
+          moto.colors.forEach(c => addColorRow(c.name, c.img));
+        } else if (moto.motoImg) {
+          addColorRow('Padrão', moto.motoImg);
+        }
+
+        if (moto.plans && moto.plans.length > 0) {
+          moto.plans.forEach(p => addPlanRow(p.months, p.installment));
+        } else {
+          addDefaultPlanRows();
+        }
+      } else {
+        title.textContent = 'Cadastrar Novo Modelo Honda';
+        document.getElementById('motoForm').reset();
+        document.getElementById('editMotoId').value = '';
+        document.getElementById('motoImgPreview').innerHTML = '<span class="text-xs text-gray-600">Sem foto da moto</span>';
+        document.getElementById('planImgPreview').innerHTML = '<span class="text-xs text-gray-600">Sem foto da tabela</span>';
+        addColorRow('Vermelho Perolizado', '');
+        addColorRow('Preto Fosco', '');
+        addDefaultPlanRows();
+      }
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeMotoEditor() {
+      document.getElementById('motoEditorModal').classList.add('hidden');
+    }
+
+    function saveMotoForm(e) {
+      e.preventDefault();
+
+      const editId = document.getElementById('editMotoId').value;
+      const name = document.getElementById('motoName').value.trim();
+      const category = document.getElementById('motoCategory').value;
+      const cashPrice = document.getElementById('motoCashPrice').value.trim();
+      const description = document.getElementById('motoDescription').value.trim();
+      const featured = document.getElementById('motoFeatured').checked;
+      const motoImg = document.getElementById('motoImageUrl').value.trim();
+      const planImg = document.getElementById('planImageUrl').value.trim();
+
+      const colorRows = document.querySelectorAll('#colorsContainer .color-row');
+      const colors = [];
+      colorRows.forEach(row => {
+        const cName = row.querySelector('.color-name-input').value.trim();
+        const cUrl = row.querySelector('.color-url-input').value.trim();
+        if (cName || cUrl) {
+          colors.push({
+            name: cName || 'Cor Padrão',
+            img: cUrl || motoImg || 'https://placehold.co/600x400/222222/CCCCCC?text=Honda+Nossamoto'
+          });
+        }
+      });
+
+      const rows = document.querySelectorAll('#plansTableBody tr');
+      const plans = [];
+      rows.forEach(row => {
+        const m = row.querySelector('.plan-months').value.trim();
+        const v = row.querySelector('.plan-installment').value.trim();
+        if (m && v) {
+          plans.push({ months: m, installment: v });
+        }
+      });
+
+      const finalMotoImg = (colors.length > 0 && colors[0].img) ? colors[0].img : motoImg;
+
+      if (editId) {
+        const index = motosData.findIndex(m => m.id === editId);
+        if (index !== -1) {
+          motosData[index] = {
+            id: editId,
+            name,
+            category,
+            cashPrice,
+            description,
+            featured,
+            motoImg: finalMotoImg,
+            planImg,
+            colors,
+            plans
+          };
+        }
+      } else {
+        const newMoto = {
+          id: Date.now().toString(),
+          name,
+          category,
+          cashPrice,
+          description,
+          featured,
+          motoImg: finalMotoImg,
+          planImg,
+          colors,
+          plans
+        };
+        motosData.unshift(newMoto);
+      }
+
+      saveMotosToStorage();
+      renderCatalog();
+      renderAdminList();
+      closeMotoEditor();
+    }
+
+    function exportBackupJSON() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(motosData, null, 2));
+      const downloadAnchor = document.createElement('a');
+      downloadAnchor.setAttribute("href", dataStr);
+      downloadAnchor.setAttribute("download", `honda_nossamoto_catalogo_${Date.now()}.json`);
+      document.body.appendChild(downloadAnchor);
+      downloadAnchor.click();
+      downloadAnchor.remove();
+    }
+
+    function importBackupJSON(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        try {
+          const imported = JSON.parse(e.target.result);
+          if (Array.isArray(imported)) {
+            motosData = imported;
+            saveMotosToStorage();
+            renderCatalog();
+            renderAdminList();
+            alert('Backup importado com sucesso!');
+          }
+        } catch(err) {
+          alert('Arquivo JSON inválido.');
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function resetDefaultData() {
+      if (confirm('Restaurar o catálogo para os modelos originais de fábrica?')) {
+        motosData = INITIAL_MOTOS;
+        saveMotosToStorage();
+        renderCatalog();
+        renderAdminList();
+      }
+    }
+
+    window.onload = function() {
+      initData();
+    };
+  </script>
+</body>
+</html>
